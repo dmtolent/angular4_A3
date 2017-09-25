@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayComponent implements OnInit {
   displayOn: boolean = false;
+  clickArray = [];
   constructor() { }
 
   ngOnInit() {
+  }
+  onToggleDisplay(){
+    this.displayOn = !this.displayOn; //to toggle display
+    this.clickArray.push(this.clickArray.length + 1); //increment array on every toggle
   }
 
 }
