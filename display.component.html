@@ -1,2 +1,3 @@
-<button (click)="displayOn = !displayOn">Display Details</button>
+<button (click)="onToggleDisplay()">Display Details</button>
 <p *ngIf="displayOn">Summer Sunshine</p>
+<p *ngFor="let click of clickArray">{{click}}</p>
