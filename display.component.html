@@ -1,3 +1,5 @@
 <button (click)="onToggleDisplay()">Display Details</button>
 <p *ngIf="displayOn">Summer Sunshine</p>
-<p *ngFor="let click of clickArray">{{click}}</p>
+<p *ngFor="let click of clickArray"
+   [ngStyle]="{backgroundColor: click >= 5 ? 'blue' : 'transparent'}"
+   [ngClass]="{'white-text':click >=5}">{{click}}</p>
